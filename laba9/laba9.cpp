@@ -200,6 +200,9 @@ unique_ptr<Piece> createPiece() { //это умный указатель из с
     cin >> color;
     Color pieceColor = (color == 0) ? Color::WHITE : Color::BLACK;
 
+    // это функция, доступная в стандартной библиотеке C++ с версии C++14 и далее, которая используется для создания unique_ptr объектов.
+    // Она упрощает процесс создания указателей на динамически выделенные объекты и помогает избежать ошибок, связанных с ручным управлением памятью.
+    // иначе ломается 
     switch (choice) {
     case 1: return make_unique<Pawn>(pieceColor, pos);
     case 2: return make_unique<Knight>(pieceColor, pos);
